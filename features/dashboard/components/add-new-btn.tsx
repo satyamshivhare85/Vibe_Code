@@ -29,7 +29,8 @@ const AddNewButton = () => {
     // with the selected template data
     console.log("Creating new playground:", data)
     setIsModalOpen(false)
-    router.push(`/playground/${res?.id}`)
+    // router.push(`/playground/${res?.id}`)
+    router.refresh();
   }
 
   return (

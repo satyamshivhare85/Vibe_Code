@@ -59,7 +59,6 @@ export const createPlayground = async (data:{
                 userId:user?.id!
             }
         })
-
         return playground;
     } catch (error) {
         console.log(error)
