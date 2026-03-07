@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { format } from "date-fns";
 import type { Project } from "../types";
@@ -62,7 +61,7 @@ interface ProjectTableProps {
     data: { title: string; description: string }
   ) => Promise<void>;
   onDeleteProject?: (id: string) => Promise<void>;
-  onDuplicateProject?: (id: string) => Promise<void>;
+  onDuplicateProject?: (id: string) => Promise<unknown>;
   onMarkasFavorite?: (id: string) => Promise<void>;
 }
 
@@ -202,7 +201,6 @@ export default function ProjectTable({
                     </span>
                   </div>
                 </TableCell>
-                {/* another table cell */}
                 <TableCell>
                   <Badge
                     variant="outline"
@@ -211,8 +209,6 @@ export default function ProjectTable({
                     {project.template}
                   </Badge>
                 </TableCell>
-
-                {/* table cell for created date */}
                 <TableCell>
                   {format(new Date(project.createdAt), "MMM d, yyyy")}
                 </TableCell>
@@ -221,7 +217,7 @@ export default function ProjectTable({
                     <div className="w-8 h-8 rounded-full overflow-hidden">
                       <Image
                         src={project.user.image || "/placeholder.svg"}
-                        alt={project.user.name}
+                     alt={project.user.name ?? "User"}
                         width={32}
                         height={32}
                         className="object-cover"
@@ -230,8 +226,6 @@ export default function ProjectTable({
                     <span className="text-sm">{project.user.name}</span>
                   </div>
                 </TableCell>
-
-            {/* table cell for dropdown */}
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>

@@ -21,12 +21,12 @@ export default async function DashboardLayout({
   }
 
   const formattedPlaygroundData =
-    playgroundData?.map((playground) => ({
-      id: playground.id,
-      name: playground.title,
-      starred: playground.Starmark?.[0]?.isMarked || false,
+    playgroundData?.map((item) => ({
+      id: item.id,
+      name: item.title,
+      starred: item.Starmark?.[0]?.isMarked || false,
       // Pass the icon name as a string
-      icon: technologyIconMap[playground.template] || "Code2", // Default to "Code2" if template not found
+      icon: technologyIconMap[item.template] || "Code2", // Default to "Code2" if template not found
     })) || []
 
   return (
