@@ -31,6 +31,7 @@ export const createPlayground = async (data:{
                 userId: user.id
             }
         });
+         revalidatePath("/dashboard");
 
         return playground;
 
@@ -69,6 +70,7 @@ export const getAllPlaygrounds = async () => {
                 }
             }
         });
+         revalidatePath("/dashboard");
 
         return playgrounds;
 
