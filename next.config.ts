@@ -15,6 +15,24 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+
+  //for handling cors
+
+  async headers() {
+    return [
+      { 
+        //apply to all routes
+        source:'/:path*',
+        headers:[
+          { key: 'Cross-origin-Opener-Policy',
+             value: 'same-origin' },
+          { key: 'Cross-origin-Embedder-Policy',
+              value: 'require-corp' },
+        ]
+      }
+    ]
+  }   
 };
 
 export default nextConfig;

@@ -104,7 +104,7 @@ const TerminalComponent = forwardRef<TerminalRef, TerminalProps>(({
     }
   }, []);
 
-  // Expose methods through ref
+  // Expose methods through ref   some methods in terminal
   useImperativeHandle(ref, () => ({
     writeToTerminal: (data: string) => {
       if (term.current) {

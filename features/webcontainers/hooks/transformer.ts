@@ -1,3 +1,7 @@
+// 
+// this file is responsible for transforming the template structure into the format required by WebContainer. It takes a template object that contains folder and file information and converts it into a nested structure that WebContainer can understand. The transformation process involves recursively processing each item in the template, determining whether it's a file or a directory, and constructing the appropriate structure for WebContainer. This allows us to easily create a virtual file system within WebContainer based on our template data.
+//is code ke andr me jana bs upr upr se dekh lo
+//hmare template ko--->web container ke format me change krna main kam hai
 interface TemplateItem {
   filename: string;
   fileExtension: string;
@@ -20,6 +24,10 @@ interface WebContainerDirectory {
 
 type WebContainerFileSystem = Record<string, WebContainerFile | WebContainerDirectory>;
 
+
+
+
+//main--->
 export function transformToWebContainerFormat(template: { folderName: string; items: TemplateItem[] }): WebContainerFileSystem {
   function processItem(item: TemplateItem): WebContainerFile | WebContainerDirectory {
     if (item.folderName && item.items) {

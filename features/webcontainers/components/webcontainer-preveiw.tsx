@@ -151,7 +151,7 @@ const WebContainerPreview: React.FC<WebContainerPreviewProps> = ({
         installProcess.output.pipeTo(
           new WritableStream({
             write(data) {
-              // Write directly to terminal
+              // Write directly to terminal in data
               if (terminalRef.current?.writeToTerminal) {
                 terminalRef.current.writeToTerminal(data);
               }
