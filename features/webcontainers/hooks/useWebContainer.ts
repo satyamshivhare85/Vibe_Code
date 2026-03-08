@@ -10,8 +10,8 @@ interface UseWebContainerReturn {
   serverUrl: string | null;
   isLoading: boolean;
   error: string | null;
-  instance: WebContainer | null;
-  writeFileSync: (path: string, content: string) => Promise<void>;
+  instance: WebContainer | null;    //instance 
+  writeFileSync: (path: string, content: string) => Promise<void>; //editor me change ho to vo bhi dikhne chaiye
   destroy: () => void; // Added destroy function
 }
 
