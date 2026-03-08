@@ -39,7 +39,7 @@ Keep responses concise but comprehensive. Use code blocks with language specific
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "codellama:latest",
+        model: "codellama:7b",
         prompt,
         stream: false,
         options: {
