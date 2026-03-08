@@ -1,13 +1,17 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import dynamic from "next/dynamic";
 import type { TemplateFolder } from "@/features/playground/libs/path-to-json";
 import { transformToWebContainerFormat } from "../hooks/transformer";
 import { CheckCircle, Loader2, XCircle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import TerminalComponent from "./terminal";
-import { WebContainer } from "@webcontainer/api";
 
+import { WebContainer } from "@webcontainer/api";
+const TerminalComponent = dynamic(
+  () => import("./terminal"),
+  { ssr: false }
+);
 interface WebContainerPreviewProps {
   templateData: TemplateFolder;
   serverUrl: string;
@@ -151,7 +155,7 @@ const WebContainerPreview: React.FC<WebContainerPreviewProps> = ({
         installProcess.output.pipeTo(
           new WritableStream({
             write(data) {
-              // Write directly to terminal in data
+              // Write directly to terminal
               if (terminalRef.current?.writeToTerminal) {
                 terminalRef.current.writeToTerminal(data);
               }
