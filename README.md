@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Vibecode Editor – AI-Powered Web IDE
 
-## Getting Started
+Vibecode Editor is a high-performance, AI-native web IDE built entirely in the browser. Designed with a modern developer-first approach, it combines real-time execution, intelligent code assistance, and a seamless UI to deliver a powerful coding experience without local setup.
 
-First, run the development server:
+Built using cutting-edge technologies like Next.js App Router, Monaco Editor, and WebContainers, Vibecode brings the full development environment directly to your browser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🚀 Key Features
+🔐 Authentication & Security
+OAuth-based login powered by NextAuth.js
+Supports Google & GitHub authentication providers
+Secure session management
+🎨 Developer-Centric UI
+Clean, responsive UI built with Tailwind CSS and shadcn/ui
+Dark/Light mode toggle for better accessibility
+Optimized layout for productivity and focus
+🧱 Multi-Stack Project Support
+Pre-configured templates:
+React
+Next.js
+Express
+Hono
+Vue
+Angular
+🗂️ File System Management
+Custom file explorer with:
+Create / Rename / Delete files & folders
+Real-time updates
+Structured project navigation
+🖊️ Advanced Code Editing
+Powered by Monaco Editor
+Features include:
+Syntax highlighting
+Auto-formatting
+Custom keybindings
+Intelligent autocomplete
+💡 AI-Powered Development
+Integrated with Ollama for local AI inference
+Code suggestions triggered via:
+Ctrl + Space or double Enter
+Accept suggestions instantly with Tab
+⚙️ In-Browser Runtime
+Execute full-stack apps using WebContainers
+No local setup required
+Supports both frontend & backend environments
+💻 Integrated Terminal
+Embedded terminal powered by xterm.js
+Fully interactive shell experience
+🤖 AI Chat Assistant
+Context-aware chat assistant
+Share files for:
+Code explanations
+Refactoring
+Debugging support
+🧱 Tech Stack
+Layer	Technology
+Framework	Next.js 15 (App Router)
+Styling	TailwindCSS, ShadCN UI
+Language	TypeScript
+Auth	NextAuth (Google + GitHub OAuth)
+Editor	Monaco Editor
+AI Engine	Ollama (Local LLM via Docker)
+Runtime	WebContainers
+Terminal	xterm.js
+Database	MongoDB
